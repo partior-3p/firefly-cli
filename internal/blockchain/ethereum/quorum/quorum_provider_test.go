@@ -302,10 +302,10 @@ func TestCreateAccount(t *testing.T) {
 				InitDir:                t.TempDir(),
 				RuntimeDir:             t.TempDir(),
 			},
-			Args: []string{"Org-1_quorum", "Org-1_quorum", "0", "1"},
+			Args: []string{"Org-1_quorum", "Org-1_quorum", "0"},
 		},
 		{
-			Name: "testcase1",
+			Name: "testcase2",
 			Ctx:  ctx,
 			Stack: &types.Stack{
 				Name:                   "Org-2_quorum",
@@ -315,7 +315,7 @@ func TestCreateAccount(t *testing.T) {
 				InitDir:                t.TempDir(),
 				RuntimeDir:             t.TempDir(),
 			},
-			Args: []string{"Org-2_quorum", "Org-2_quorum", "1", "2"},
+			Args: []string{"Org-2_quorum", "Org-2_quorum", "1"},
 		},
 	}
 	for _, tc := range testcases {
